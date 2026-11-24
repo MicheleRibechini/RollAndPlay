@@ -1,0 +1,9 @@
+{
+  "languages": ["it"],
+  "default_language": "it",
+  "contacts": [
+    {"label": "Email dell'autore", "url": "", "placeholder": true},
+    {"label": "Buy Me a Coffee", "url": "", "placeholder": true}
+  ],
+  "creation_disabled": ["maestro"]
+}

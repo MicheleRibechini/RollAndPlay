@@ -83,10 +83,69 @@ table{border-collapse:collapse;width:100%;font-size:.95rem;background:var(--card
 th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}
 th{font:700 1.08rem/1.2 "Cormorant Garamond",serif;background:var(--paper-2)}
 
+/* ---------- pagina del setting: apertura e sezioni a fisarmonica */
+.lead{margin:0 4px 24px;font-size:1.05rem}
+details summary{list-style:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+details summary::-webkit-details-marker{display:none}
+details.top{border-top:1px solid var(--line)}
+details.top:last-of-type{border-bottom:1px solid var(--line)}
+details.top>summary{display:flex;align-items:baseline;gap:14px;padding:18px 4px}
+.top-h{font:700 clamp(1.35rem,5vw,1.85rem)/1.2 "Cinzel Decorative",serif;flex:1}
+details.top>summary::after,details.sub>summary::after{content:"+";font:400 1.5rem/1 "Cormorant Garamond",serif;color:var(--accent)}
+details[open]>summary::after{content:"\2212"}
+.top-body{padding:0 4px 28px}
+details.sub{border-left:2px solid var(--line);margin:10px 0;padding-left:14px;transition:border-color .2s}
+details.sub[open]{border-left-color:var(--accent)}
+details.sub>summary{display:flex;align-items:baseline;gap:10px;padding:8px 0}
+.sub-h{font:700 1.36rem/1.25 "Cormorant Garamond",serif;flex:1}
+.sub-body{padding:2px 0 12px}
+
+/* ---------- creazione */
+.options{display:grid;gap:10px;margin:14px 0}
+.option{cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:3px;padding:12px 14px;transition:border-color .15s,box-shadow .15s}
+.option:has(> .option-head input:checked){border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 6px 18px -10px var(--shade)}
+.option.is-disabled{opacity:.6;cursor:not-allowed}
+.option-head{display:flex;align-items:center;gap:10px}
+.option-head input,.form-opt input{accent-color:var(--accent)}
+.option-head input{width:18px;height:18px;flex:none}
+.option-name{font:700 1.24rem/1.2 "Cormorant Garamond",serif}
+.badge{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent-soft);padding:1px 6px;border-radius:2px;margin-left:auto}
+.option-desc{margin:6px 0 0 28px;font-size:.96rem;color:var(--ink-soft)}
+.subchoice{margin:10px 0 0 28px;display:none;cursor:default}
+.option:has(> .option-head input:checked) .subchoice{display:block}
+.sub-title{font:600 .78rem/1 "Source Sans 3",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:6px 0}
+.form-opt{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;align-items:start;padding:8px 0;border-top:1px dashed var(--line);cursor:pointer}
+.form-opt input{margin-top:4px}
+.form-name{font:700 1.12rem/1.3 "Cormorant Garamond",serif}
+.form-desc{grid-column:2;font-size:.92rem;color:var(--ink-soft)}
+.form-opt .sub-label{grid-column:2}
+.sub-label{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:.9rem;color:var(--ink-soft)}
+select,input[type=text],textarea{font:inherit;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:2px;padding:6px 8px;max-width:100%}
+.other-input{margin-top:8px;width:100%}
+.field{margin:12px 0;display:grid;gap:4px}
+.field label{font:700 1.14rem/1.2 "Cormorant Garamond",serif}
+.field input,.field textarea{width:100%}
+
+/* ---------- scheda */
+.sheet{margin-top:24px;padding:18px;background:var(--sheet);color:var(--sheet-text);border:1px solid var(--line);border-radius:3px}
+.sheet h3{margin:0 0 10px;font:700 1.3rem/1.2 "Cinzel Decorative",serif;color:var(--sheet-text)}
+.sheet dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0}
+.sheet dt{font:700 1.06rem/1.4 "Cormorant Garamond",serif;color:var(--sheet-label)}
+.sheet dt small{display:block;font:400 .72rem/1 "Source Sans 3",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:color-mix(in srgb,var(--sheet-text) 60%,transparent)}
+.sheet dd{margin:0}
+.sheet dd.empty{color:color-mix(in srgb,var(--sheet-text) 50%,transparent);font-style:italic}
+.sheet-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.sheet button{font:600 .95rem/1 "Source Sans 3",sans-serif;padding:10px 14px;border-radius:2px;border:1px solid var(--sheet-label);background:var(--sheet-label);color:var(--sheet);cursor:pointer}
+.sheet button.ghost{background:transparent;color:var(--sheet-text);border-color:color-mix(in srgb,var(--sheet-text) 35%,transparent)}
+.sheet-msg{min-height:1.2em;font-size:.85rem;color:var(--sheet-label);margin:8px 0 0}
+
 /* ---------- piè di pagina */
 footer{text-align:center;color:var(--ink-soft);font:italic 500 1rem "Cormorant Garamond",serif;margin-top:40px}
 
 @media (max-width:520px){
   body{font-size:16px}
   .topbar a{padding:6px 7px;letter-spacing:.08em}
+  .option-desc,.subchoice{margin-left:0}
+  .sheet dl{grid-template-columns:1fr}
+  .sheet dt{margin-top:6px}
 }
