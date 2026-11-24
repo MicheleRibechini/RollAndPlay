@@ -4,30 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Roll &amp; Play</title>
-<style>
-:root{--paper:#f3f2ef;--ink:#1b1f27;--soft:#5a6270;--line:#c9cdd3;--accent:#6b1d27}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
-.wrap{max-width:640px;margin:0 auto;padding:56px 20px 80px}
-h1{font:700 clamp(2rem,8vw,3rem)/1.1 Georgia,"Times New Roman",serif;margin:0 0 .2em;letter-spacing:.02em}
-.sub{color:var(--soft);margin:0 0 40px}
-ul{list-style:none;padding:0;margin:0}
-li{border-top:1px solid var(--line)}
-li:last-child{border-bottom:1px solid var(--line)}
-a{display:block;padding:18px 4px;color:inherit;text-decoration:none}
-a:hover .name,a:focus-visible .name{color:var(--accent)}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.name{display:block;font:700 1.5rem/1.2 Georgia,"Times New Roman",serif}
-.desc{display:block;color:var(--soft);font-size:.95rem}
-</style>
+<script>try{var t=localStorage.getItem("rnp-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+<nav class="topbar"><div class='links'><a href='#intro'>Introduzione</a><a href='#settings'>Setting</a><a href='#play'>Come si gioca</a><a href='#contacts'>Contatti</a></div><button type="button" class="theme-toggle" aria-label="Cambia tema chiaro o scuro" title="Cambia tema chiaro o scuro"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 2a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button></nav>
 <div class="wrap">
-<h1>Roll &amp; Play</h1>
-<p class="sub">Scegli il setting.</p>
-<ul>
-<li><a href="drustvar/"><span class="name">Drustvar</span><span class="desc">Manuale di campagna</span></a></li>
-</ul>
+<header class='masthead'><h1>Roll &amp; Play</h1><div class='sub'>Gioco di ruolo a narrazione condivisa</div><div class='ornament' aria-hidden='true'>✠</div></header>
+<main>
+<section class='home-sec' id='intro'><h2 class='sec-h'><span class='num'>I</span><span>Introduzione</span></h2><div class='placeholder'><span class='ph-label'>Testo segnaposto</span><p>Qui andranno l&#x27;introduzione al sistema e la sua filosofia, uguali per tutti i setting. Fonte: RNP-MANUAL, ancora vuoto.</p></div></section><section class='home-sec' id='settings'><h2 class='sec-h'><span class='num'>II</span><span>Setting</span></h2><div class='settings'><a class='setting-card' href='drustvar/'><figure><svg viewBox='0 0 160 70' preserveAspectRatio='xMidYMid slice' role='img' aria-label='Immagine segnaposto'><rect width='160' height='70' style='fill:var(--paper-2)'/><path d='M0 70 L160 0 M0 0 L160 70' style='stroke:var(--line);stroke-width:.4'/><text x='80' y='41' text-anchor='middle' font-size='14' style='fill:var(--accent)'>✠</text></svg><figcaption>Immagine segnaposto</figcaption></figure><div class='card-body'><span class='card-name'>Drustvar</span><p class='card-desc'>La campagna è ambientata a <strong>Drustvar</strong>, una città-stato noir e dieselpunk dove la magia è ovunque e nessuno ne è al sicuro. Gli occultisti espirano il Fumo, che si raccoglie nelle nubi e ricade come Pioggia Nera, generando maledizioni e Abomini. Gli Inquisitori, mutati dal Brume, li cacciano per conto della Corona, mentre alchimisti, ingegneri, criminali e Grandi Famiglie si contendono il resto. Dietro ogni porta c&#x27;è un segreto, e chi prova a cambiare le cose scopre presto chi ha da perdere. <span class='tag'>Materiale di prova</span></p><span class='card-cta'>Apri il manuale</span></div></a></div></section><section class='home-sec' id='play'><h2 class='sec-h'><span class='num'>III</span><span>Come si gioca</span></h2><div class='placeholder'><span class='ph-label'>Testo segnaposto</span><p>Qui andranno le regole generali, valide per ogni setting. Fonte: RNP-MANUAL, ancora vuoto.</p></div></section><section class='home-sec' id='contacts'><h2 class='sec-h'><span class='num'>IV</span><span>Contatti</span></h2><div class='placeholder'><span class='ph-label'>Testo segnaposto</span><p>Contatti dell&#x27;autore e link di supporto: indirizzi ancora da definire.</p></div><ul class='contacts'><li>Email dell&#x27;autore</li><li>Buy Me a Coffee</li></ul></section>
+</main>
+<footer>Che il Mondo vi resista.</footer>
 </div>
+<script src="assets/site.js"></script>
 </body>
 </html>
